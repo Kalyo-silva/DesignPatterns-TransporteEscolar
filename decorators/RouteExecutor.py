@@ -4,10 +4,10 @@ import random
 
 # Implementando o design Pattern Decorator com a validação de pontos extras na rota.
 class RouteExecutor():
-    def __init__(self, rota: Rota, veiculo: Veiculo):
+    def __init__(self, rota: Rota, veiculo: Veiculo, precoCombustivel: float):
         self.rota = rota
         self.veiculo = veiculo
-        self.precoCombustivel = 0
+        self.precoCombustivel = precoCombustivel 
 
     def setPrecoCombustivel(self, preco: float):
         self.precoCombustivel = preco
@@ -19,7 +19,7 @@ class RouteExecutor():
             args[0].rota.qtdPontos += pontosExtras # aumenta a quantidade de pontos para executar a rota
             result = func(*args, *kwargs)
             args[0].rota.qtdPontos -= pontosExtras # reduz para o tamanho original da rota
-            return result
+            return result, pontosExtras
         return wrapper
     
     @verificaPontoExtra # wrapping da função executaRota
