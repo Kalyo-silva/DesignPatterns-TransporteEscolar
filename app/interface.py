@@ -25,6 +25,7 @@ def mainLogo():
     print('╋╋┗┛┗┛┗┛┗┻┛┗┻━━┫┏━┻━━┻┛┗━┻━━┛┗━━━┻━━┻━━┻━━┻━┻┛┗┻┛')
     print('╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋┃┃')
     print('╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋┗┛\033[0m')
+    print('\033[93m - By Kalyo Airan da Silva\033[0m')
 
 def routesLogo():
     clear_screen()
